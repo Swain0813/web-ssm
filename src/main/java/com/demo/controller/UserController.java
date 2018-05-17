@@ -23,6 +23,7 @@ public class UserController {
     public String showUser(HttpServletRequest request, Model model){
         log.info("查询所有用户信息");
         List<User> userList = userService.getAllUser();
+        log.info("aaa");
         model.addAttribute("userList",userList);
         return "showUser";
     }
